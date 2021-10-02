@@ -1,0 +1,9 @@
+{
+    "nofarius1992_blog_category": {
+        "column": {
+            "title": true,
+            "is_active": true,
+            "description": true
+        }
+    }
+}
