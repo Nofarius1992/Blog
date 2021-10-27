@@ -1,10 +1,11 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Nofarius1992\Blog\Model;
 
-use Nofarius1992\Blog\Model\ResourceModel\Category as ResourceModel;
 use Magento\Framework\Model\AbstractModel;
+use Nofarius1992\Blog\Model\ResourceModel\Category as ResourceModel;
 
 /**
  * Blog category model
