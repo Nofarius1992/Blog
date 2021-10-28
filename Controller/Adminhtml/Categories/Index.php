@@ -8,7 +8,7 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\PageFactory;
 
 /**
- * Index action.
+ * Index action
  */
 class Index implements HttpGetActionInterface
 {
