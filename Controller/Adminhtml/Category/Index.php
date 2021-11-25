@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Nofarius1992\Blog\Controller\Adminhtml\Categories;
+namespace Nofarius1992\Blog\Controller\Adminhtml\Category;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\PageFactory;
@@ -12,7 +12,7 @@ use Magento\Framework\View\Result\PageFactory;
  */
 class Index implements HttpGetActionInterface
 {
-    private const MENU_ID = 'Nofarius1992_Blog::blog_categories';
+    const MENU_ID = 'Nofarius1992_Blog::blog_categories';
 
     private PageFactory $resultPageFactory;
 
