@@ -11,5 +11,9 @@
         <constraint xsi:type="primary" referenceId="PRIMARY">
             <column name="category_id"/>
         </constraint>
+        <index referenceId="NOFARIUS1992_BLOG_CATEGORY_TITLE_DESCRIPTION" indexType="fulltext">
+            <column name="title"/>
+            <column name="description"/>
+        </index>
     </table>
 </schema>

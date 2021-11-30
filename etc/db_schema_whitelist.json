@@ -1,0 +1,16 @@
+{
+    "nofarius1992_blog_category": {
+        "column": {
+            "category_id": true,
+            "title": true,
+            "is_active": true,
+            "description": true
+        },
+        "index": {
+            "NOFARIUS1992_BLOG_CATEGORY_TITLE_DESCRIPTION": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

@@ -6,8 +6,11 @@
  */
 namespace Nofarius1992\Blog\Controller\Adminhtml\Category;
 
+use Exception;
 use Magento\Backend\App\Action;
 use Magento\Backend\App\Action\Context;
+use Magento\Backend\Model\View\Result\Redirect;
+use Magento\Framework\Exception\LocalizedException;
 use Nofarius1992\Blog\Model\ResourceModel\Category\CollectionFactory;
 use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Framework\Controller\ResultFactory;
@@ -33,7 +36,7 @@ class MassDelete extends Action implements HttpPostActionInterface
     /**
      * @var CollectionFactory
      */
-    protected $collectionFactory;
+    protected CollectionFactory $collectionFactory;
 
     /**
      * @param Context $context
@@ -50,16 +53,13 @@ class MassDelete extends Action implements HttpPostActionInterface
     /**
      * Execute action
      *
-     * @return \Magento\Backend\Model\View\Result\Redirect
-     * @throws \Magento\Framework\Exception\LocalizedException|\Exception
+     * @return Redirect
+     * @throws LocalizedException|Exception
      */
-    public function execute()
+    public function execute(): Redirect
     {
         $collection = $this->filter->getCollection($this->collectionFactory->create());
         $collectionSize = $collection->getSize();
-        $collectionSelect = $collection->getSelect() . '';
-        var_dump($collectionSelect);
-        exit;
 
         foreach ($collection as $block) {
             $block->delete();
@@ -67,7 +67,7 @@ class MassDelete extends Action implements HttpPostActionInterface
 
         $this->messageManager->addSuccessMessage(__('A total of %1 record(s) have been deleted.', $collectionSize));
 
-        /** @var \Magento\Backend\Model\View\Result\Redirect $resultRedirect */
+        /** @var Redirect $resultRedirect */
         $resultRedirect = $this->resultFactory->create(ResultFactory::TYPE_REDIRECT);
         return $resultRedirect->setPath('*/*/');
     }
