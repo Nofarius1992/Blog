@@ -6,6 +6,13 @@
         </item>
     </argument>
     <settings>
+        <buttons>
+            <button name="add">
+                <url path="*/*/new"/>
+                <class>primary</class>
+                <label translate="true">Add New Category</label>
+            </button>
+        </buttons>
         <spinner>nofarius1992_blog_category_listing_columns</spinner>
         <deps>
             <dep>nofarius1992_blog_category_listing.nofarius1992_blog_category_listing_data_source</dep>

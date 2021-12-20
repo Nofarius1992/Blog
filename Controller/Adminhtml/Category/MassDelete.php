@@ -1,9 +1,5 @@
 <?php
-/**
- *
- * Copyright © Magento, Inc. All rights reserved.
- * See COPYING.txt for license details.
- */
+
 namespace Nofarius1992\Blog\Controller\Adminhtml\Category;
 
 use Exception;
@@ -17,26 +13,20 @@ use Magento\Framework\Controller\ResultFactory;
 use Magento\Ui\Component\MassAction\Filter;
 
 /**
- * Class MassDelete delete select entity
+ * Delete select entity.
  */
 class MassDelete extends Action implements HttpPostActionInterface
 {
     /**
-     * Authorization level of a basic admin session
+     * Authorization level of a basic admin session.
      *
      * @see _isAllowed()
      */
-    const ADMIN_RESOURCE = 'Nofarius1992_Blog::blog_categories';
+    public const ADMIN_RESOURCE = 'Nofarius1992_Blog::blog_categories';
 
-    /**
-     * @var Filter
-     */
-    protected Filter $filter;
+    private Filter $filter;
 
-    /**
-     * @var CollectionFactory
-     */
-    protected CollectionFactory $collectionFactory;
+    private CollectionFactory $collectionFactory;
 
     /**
      * @param Context $context
@@ -51,7 +41,7 @@ class MassDelete extends Action implements HttpPostActionInterface
     }
 
     /**
-     * Execute action
+     * Execute action.
      *
      * @return Redirect
      * @throws LocalizedException|Exception

@@ -7,7 +7,7 @@ namespace Nofarius1992\Blog\Model\ResourceModel;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 
 /**
- * Blog category resource model
+ * Blog category resource model.
  */
 class Category extends AbstractDb
 {

@@ -15,15 +15,11 @@ use Nofarius1992\Blog\Model\ResourceModel\Category\Collection as CategoryCollect
 use Psr\Log\LoggerInterface;
 
 /**
- * Class Collection
- * Collection for displaying grid of sales documents
+ * Class Collection for displaying grid of sales documents.
  */
 class Collection extends CategoryCollection implements SearchResultInterface
 {
-    /**
-     * @var AggregationInterface
-     */
-    protected AggregationInterface $aggregations;
+    public AggregationInterface $aggregations;
 
     /**
      * @param EntityFactoryInterface $entityFactory
@@ -67,9 +63,6 @@ class Collection extends CategoryCollection implements SearchResultInterface
         $this->setMainTable($mainTable);
     }
 
-    /**
-     * @return AggregationInterface
-     */
     public function getAggregations(): AggregationInterface
     {
         return $this->aggregations;
@@ -109,8 +102,6 @@ class Collection extends CategoryCollection implements SearchResultInterface
 
     /**
      * Get total count.
-     *
-     * @return int
      */
     public function getTotalCount(): int
     {

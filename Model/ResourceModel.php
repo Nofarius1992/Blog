@@ -7,7 +7,7 @@ namespace Nofarius1992\Blog\Model;
 use Magento\Catalog\Model\ResourceModel\Category;
 
 /**
- * Resource Model Category
+ * Resource model for category entity.
  */
 class ResourceModel extends Category
 {

@@ -9,12 +9,12 @@ use Nofarius1992\Blog\Model\Category as Model;
 use Nofarius1992\Blog\Model\ResourceModel\Category as ResourceModel;
 
 /**
- * Blog category collection
+ * Class collection category.
  */
 class Collection extends AbstractCollection
 {
 
-    protected $_idFieldName = 'category_id';
+    public $_idFieldName = 'category_id';
 
     /**
      * @inheritDoc

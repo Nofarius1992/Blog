@@ -8,7 +8,7 @@ use Magento\Framework\Model\AbstractModel;
 use Nofarius1992\Blog\Model\ResourceModel\Category as ResourceModel;
 
 /**
- * Blog category model
+ * Catalog category.
  */
 class Category extends AbstractModel
 {

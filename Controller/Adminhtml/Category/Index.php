@@ -8,11 +8,11 @@ use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\PageFactory;
 
 /**
- * Index action
+ * Create page category.
  */
 class Index implements HttpGetActionInterface
 {
-    const MENU_ID = 'Nofarius1992_Blog::blog_categories';
+    private const MENU_ID = 'Nofarius1992_Blog::blog_categories';
 
     private PageFactory $resultPageFactory;
 
@@ -22,6 +22,8 @@ class Index implements HttpGetActionInterface
     }
 
     /**
+     * Create page category.
+     *
      * @inheritDoc
      */
     public function execute() :object

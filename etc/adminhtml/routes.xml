@@ -4,5 +4,8 @@
         <route id="blog" frontName="blog">
             <module name="Nofarius1992_Blog" before="Magento_Backend"/>
         </route>
+        <route id="uiform" frontName="uiform">
+            <module name="Nofarius1992_Blog"/>
+        </route>
     </router>
 </config>
