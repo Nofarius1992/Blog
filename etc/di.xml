@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="nofarius1992_blog_category_listing_data_source" xsi:type="string">Nofarius1992\Blog\Model\ResourceModel\Category\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Nofarius1992\Blog\Model\ResourceModel\Category\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">nofarius1992_blog_category</argument>
+            <argument name="eventPrefix" xsi:type="string">blog_category_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">category_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Nofarius1992\Blog\Model\ResourceModel\Category</argument>
+        </arguments>
+    </type>
+</config>

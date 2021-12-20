@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Nofarius1992\Blog\Controller\Adminhtml\Categories;
+namespace Nofarius1992\Blog\Controller\Adminhtml\Category;
 
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\View\Result\PageFactory;
 
 /**
- * Index action
+ * Create page category.
  */
 class Index implements HttpGetActionInterface
 {
@@ -22,6 +22,8 @@ class Index implements HttpGetActionInterface
     }
 
     /**
+     * Create page category.
+     *
      * @inheritDoc
      */
     public function execute() :object
